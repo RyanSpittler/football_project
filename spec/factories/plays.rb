@@ -1,9 +1,8 @@
 FactoryGirl.define do
   factory :play do
-    team "MyString"
-play_type "MyString"
-direction "MyString"
-yards 1
+    team { Faker::Lorem.word }
+    play_type "MyString"
+    direction "MyString"
+    yards 1
   end
-
 end

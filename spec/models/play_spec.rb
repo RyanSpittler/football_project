@@ -1,5 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Play, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should validate_presence_of(:team) }
+  it { should validate_presence_of(:play_type) }
+  it { should validate_presence_of(:direction) }
+  it { should validate_presence_of(:yards) }
 end
