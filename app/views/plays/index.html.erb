@@ -1,0 +1,35 @@
+<div class="page-header">
+  <%= link_to new_play_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Play
+  <% end %>
+  <h1>Listing plays</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Team</th>
+            <th>Play type</th>
+            <th>Direction</th>
+            <th>Yards</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @plays) do |play| %>
+            <td><%= play.team %></td>
+            <td><%= play.play_type %></td>
+            <td><%= play.direction %></td>
+            <td><%= play.yards %></td>
+            <td><%= link_to 'Show', play %></td>
+        <td><%= link_to 'Edit', edit_play_path(play) %></td>
+        <td><%= link_to 'Destroy', play, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
