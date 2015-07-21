@@ -2,12 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "plays/edit", type: :view do
   before(:each) do
-    @play = assign(:play, Play.create!(
-      :team => "MyString",
-      :play_type => "MyString",
-      :direction => "MyString",
-      :yards => 1
-    ))
+    @play = FactoryGirl.create(:play)
   end
 
   it "renders the edit play form" do
